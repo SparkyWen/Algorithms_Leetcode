@@ -4,9 +4,16 @@
 # it = iter(data)
 
 
+# 手写求和
 import sys
-raw = sys.stdin.buffer.read()
-non_empty = [ln for ln in raw.splitlines() if ln.strip()]
-for _ in range(len(non_empty)):
-    print(non_empty)
+raw = sys.stdin.buffer.read().strip().split()
+it = iter(raw)
+
+ni = lambda:int(next(it))
+sum = 0
+
+for _ in range(len(raw)):
+    n = ni()
+    sum += n
+print(sum)
 
